@@ -20,7 +20,7 @@ const AuthenticationsValidator = require('./validator/authentications');
 
 // Collaborations
 const collaborations = require('./api/collaborations');
-const CollaborationsService = require('./services/postgres/CollaborationsService');
+const CollaborationsService = require('./services/postgres/collaborationsService');
 const CollaborationsValidator = require('./validator/collaborations');
  
 const init = async () => {
