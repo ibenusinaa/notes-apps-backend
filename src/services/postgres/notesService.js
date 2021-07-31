@@ -49,14 +49,14 @@ class NotesService {
       LEFT JOIN users ON users.id = notes.owner
       WHERE notes.id = $1`,
       values: [id],
-    };
-    const result = await this._pool.query(query);
+    }
+    const result = await this._pool.query(query)
 
 		if (!result.rows.length) {
-      throw new NotFoundError('Catatan tidak ditemukan');
+      throw new NotFoundError('Catatan tidak ditemukan')
     }
  
-    return result.rows.map(mapDBToModel)[0];
+    return result.rows.map(mapDBToModel)[0]
 	}
 
 	async editNoteById(id, { title, body, tags }) {
